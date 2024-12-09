@@ -1,12 +1,13 @@
 import uvicorn
 from fastapi import FastAPI
+from settings import app_settings
 
 
 app = FastAPI(
     title="Learning FastAPI",
     summary="Изучаем FastAPI",
-    version="0.1.0",
-    debug=True,
+    version=app_settings.version,
+    debug=app_settings.debug,
     docs_url="/swagger",
     description="Пробный проект с целью изучить FastAPI",
 )
